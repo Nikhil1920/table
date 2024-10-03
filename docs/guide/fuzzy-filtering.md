@@ -110,7 +110,7 @@ const fuzzySort: SortingFn<any> = (rowA, rowB, columnId) => {
 
 In this function, we're comparing the ranking information of the two rows. If the ranks are equal, we fall back to alphanumeric sorting.
 
-You can then specify this sorting function in the sortFn option of the column definition:
+You can then specify this sorting function in the sortingFn option of the column definition:
 
 ```typescript
 {
@@ -119,6 +119,6 @@ You can then specify this sorting function in the sortFn option of the column de
   header: 'Full Name',
   cell: info => info.getValue(),
   filterFn: 'fuzzy', //using our custom fuzzy filter function
-  sortFn: 'fuzzySort', //using our custom fuzzy sort function
+  sortingFn: 'fuzzySort', //using our custom fuzzy sort function
 }
 ```
